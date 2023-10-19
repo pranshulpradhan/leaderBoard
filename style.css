@@ -1,0 +1,96 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f0f0f0;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+h1 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+input, button {
+    margin: 5px;
+    padding: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+input:focus, button:hover {
+    background-color: #007BFF;
+    color: #fff;
+    transform: scale(1.05);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+th {
+    background-color: #007BFF;
+    color: #fff;
+    font-weight: bold;
+}
+
+td {
+    background-color: #f0f0f0;
+}
+
+td:hover {
+    background-color: #c7f2a0; 
+    transition: background-color 0.3s ease;
+}
+
+button.delete {
+    background-color: #FF0000;
+}
+
+@keyframes rowSort {
+    0% {
+        transform: translateX(-50%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+tr.sort-animation {
+    animation: rowSort 0.5s ease;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+
+    input, button {
+        font-size: 14px;
+    }
+
+    th, td {
+        padding: 8px;
+    }
+}
